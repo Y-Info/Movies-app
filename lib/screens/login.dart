@@ -15,17 +15,18 @@ class LoginPage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("test"),
+        title: Text("THE MOVIES APP"),
         centerTitle: true,
       ),
       body: Container(
         child: Column(
           children: <Widget>[
-            _buildHeader(),
-            SizedBox(height: 15),
+            SizedBox(height: 30),
             _buildTitle(),
             SizedBox(height: 30),
             _buildForm(context),
+            SizedBox(height: 15),
+            _buildImage(),
           ],
         ),
       ),
@@ -33,9 +34,11 @@ class LoginPage extends StatelessWidget{
   }
 
   // Fonction creation header page login
-  Widget _buildHeader(){
+  Widget _buildImage(){
     return new Container(
-      child: Image.network("https://formation-facile.fr/banner-cours-udemy.png"),
+      child: Image(
+         image: AssetImage('assets/images/cinema.jpg')
+      ),
     );
   }
 
