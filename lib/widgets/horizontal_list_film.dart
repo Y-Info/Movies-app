@@ -30,9 +30,7 @@ class HorizontalListFilmState extends State<HorizontalListFilm> {
       future: getData(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
-          // print(snapshot.data);
           data = jsonDecode(snapshot.data)['results'];
-          // print(data.length);
           return Container(
             height: 240,
             child: ListView.builder(

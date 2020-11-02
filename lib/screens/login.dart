@@ -131,14 +131,19 @@ class LoginPage extends StatelessWidget{
                   ),
                   color: Colors.red,
                   onPressed: (){
-                    if( mail == "123" && pass == "123"){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => DashboardScreen())
-                      );
-                    }
-                    else{
-                      log("Erreur identifiant");
+                    if( validateEmail(mail) == true ){
+                      if(mail == "123@mail.com" && pass == "123") {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) =>
+                                DashboardScreen())
+                        );
+                      }
+                      else{
+                        log("Erreur identifiant !");
+                      }
+                    }else{
+                      log("Email invalide !");
                     }
                   },
                 ),
@@ -159,6 +164,13 @@ class LoginPage extends StatelessWidget{
     );
   }
 
+}
+
+bool validateEmail(String value) {
+  Pattern pattern =
+      r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+  RegExp regex = new RegExp(pattern);
+  return (!regex.hasMatch(value)) ? false : true;
 }
 
 

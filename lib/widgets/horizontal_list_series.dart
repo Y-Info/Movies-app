@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
@@ -29,9 +30,7 @@ class HorizontalListSeriesState extends State<HorizontalListSeries> {
       future: getData(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
-          // print(snapshot.data);
           data = jsonDecode(snapshot.data)['results'];
-          // print(data.length);
           return Container(
             height: 240,
             child: ListView.builder(
