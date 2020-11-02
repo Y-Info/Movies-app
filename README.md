@@ -1,16 +1,12 @@
 # movies
 
-A new Flutter application.
+The Flutter application just to try it out.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Create your `.env` file
+Create a `.env` file in the root of your project and insert your key/value pairs in the following format of KEY=VALUE:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+API_KEY=440d3555391bf8edewsje19005baea22
+```
