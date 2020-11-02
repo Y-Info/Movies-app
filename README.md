@@ -12,3 +12,10 @@ API_KEY=440d3555391bf8edewsje19005baea22
 ```
 
 You can get one here : https://www.themoviedb.org/?language=fr
+
+## Connection in app
+
+```
+mail : 123@mail.com
+password : 123
+```
