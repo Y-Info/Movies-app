@@ -10,3 +10,5 @@ Create a `.env` file in the root of your project and insert your key/value pairs
 ```
 API_KEY=440d3555391bf8edewsje19005baea22
 ```
+
+You can get one here : https://www.themoviedb.org/?language=fr
